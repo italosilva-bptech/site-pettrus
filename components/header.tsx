@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { PettrusLogo } from "./pettrus-logo"
 import { Button } from "./ui/button"
@@ -21,19 +20,9 @@ interface HeaderProps {
 
 export function Header({ activeRoute = "/" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const router = useRouter()
 
-  const scrollToForm = () => {
-    if (activeRoute === "/") {
-      const formSection = document.getElementById("formulario")
-      if (formSection) {
-        formSection.scrollIntoView({ behavior: "smooth" })
-      }
-    } else {
-      router.push("/#formulario")
-    }
-    setIsMenuOpen(false)
-  }
+  // A função scrollToForm foi removida, pois o Link com a âncora 
+  // do Next.js já faz esse trabalho de forma nativa e mais fluida.
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
@@ -63,12 +52,13 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
           </div>
 
           {/* CTA Button Desktop */}
-          <Button
-            onClick={scrollToForm}
-            className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-medium"
-          >
-            Faça sua cotação agora
-          </Button>
+          <Link href="/#formulario" className="hidden md:inline-flex">
+            <Button
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-medium"
+            >
+              Faça sua cotação agora
+            </Button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -99,12 +89,19 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
                   {item.label}
                 </Link>
               ))}
-              <Button
-                onClick={scrollToForm}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-medium w-full mt-2"
+              
+              {/* CTA Button Mobile - Fecha o menu ao clicar */}
+              <Link 
+                href="/#formulario" 
+                onClick={() => setIsMenuOpen(false)}
+                className="w-full mt-2"
               >
-                Faça sua cotação agora
-              </Button>
+                <Button
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-medium w-full"
+                >
+                  Faça sua cotação agora
+                </Button>
+              </Link>
             </div>
           </div>
         )}

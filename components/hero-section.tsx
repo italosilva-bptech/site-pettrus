@@ -19,12 +19,18 @@ export function HeroSection() {
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero_section-i0W1aftVdSZCUCA3KGhSIAkfHzIIkH.webp"
           alt="Família feliz dentro de um carro"
           fill
-          
+          // object-center centraliza no mobile
+          // lg:object-right mantém a família à direita no desktop
           className="object-cover object-center lg:object-right"
           priority
         />
-        {/* Gradient Overlay - Ajustado para proteger o texto à esquerda */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a2744] via-[#1a2744]/80 to-transparent" />
+        
+        {/* OVERLAYS */}
+        {/* Mobile: Cor #0E314C com 70% de opacidade (oculto no desktop) */}
+        <div className="absolute inset-0 bg-[#0E314C]/70 lg:hidden" />
+        
+        {/* Desktop: Gradiente original (oculto no mobile) */}
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#1a2744] via-[#1a2744]/80 to-transparent" />
       </div>
 
       {/* Content */}
