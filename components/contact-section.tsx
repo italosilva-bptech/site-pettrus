@@ -1,8 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link" // Importado para navegação entre páginas
-import { Phone, Headphones, MapPin } from "lucide-react"
+import Link from "next/link"
+import { Headphones, MapPin } from "lucide-react" // Removido o Phone que não será mais usado
 import { Button } from "./ui/button"
 
 const addresses = [
@@ -11,20 +11,18 @@ const addresses = [
     address: "Av. Barão do Rio Branco, 1035",
     complement: "Mariano Procópio – CEP 36045-475",
     mapUrl:
-      "https://maps.google.com", // Atualize com o link real do Google Maps
+      "https://maps.google.com",
   },
   {
     city: "Piraúba – MG",
     address: "R. Tanguanhanha, 11",
     complement: "CEP 36170-000",
     mapUrl:
-      "https://maps.google.com", // Atualize com o link real do Google Maps
+      "https://maps.google.com",
   },
 ]
 
 export function ContactSection() {
-  // Removida a função scrollToForm pois o formulário está na Home
-  
   return (
     <section id="contato" className="bg-white">
       
@@ -45,7 +43,7 @@ export function ContactSection() {
         {/* Conteúdo Centralizado */}
         <div className="relative container mx-auto px-4 py-20 lg:py-32 text-center flex flex-col items-center justify-center">
           
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight max-w-4xl">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-[3.5rem] font-bold text-white mb-6 leading-tight max-w-4xl">
             Estamos prontos para te atender!
           </h2>
 
@@ -53,7 +51,6 @@ export function ContactSection() {
             Torne-se um associado Pettrus e conte com um atendimento ágil e preparado para cuidar do que é importante para você.
           </p>
 
-          {/* AJUSTADO: Link para o formulário na Home */}
           <Link href="/#formulario">
             <Button
               className="bg-white hover:bg-white/95 text-[#07162d] rounded-full h-12 px-10 text-base font-medium w-full md:w-auto min-w-[320px] shadow-xl"
@@ -76,10 +73,16 @@ export function ContactSection() {
             </h3>
           </div>
 
-          {/* WhatsApp Card */}
+          {/* WhatsApp Card - ATUALIZADO COM O ÍCONE WPP.SVG */}
           <div className="bg-white border border-border rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="w-14 h-14 bg-[#e8f4fd] rounded-full flex items-center justify-center mx-auto mb-4">
-              <Phone className="w-7 h-7 text-[#4a90d9]" />
+              <Image 
+                src="/wpp.svg" 
+                alt="WhatsApp Pettrus" 
+                width={28} 
+                height={28} 
+                className="w-7 h-7"
+              />
             </div>
 
             <h4 className="font-heading text-base font-semibold text-foreground mb-2">

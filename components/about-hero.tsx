@@ -1,20 +1,24 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "./ui/button"
 
 export function AboutHero() {
   return (
     <>
       {/* Hero Section with Background Image */}
-      <section id="quem-somos" className="relative min-h-[500px] lg:min-h-[550px]">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner_section%20quem%20somos-sSjLrIZzQGHtvdIE4Y04m1EC68e2kq.webp')`,
-          }}
-        />
+      <section id="quem-somos" className="relative min-h-[500px] lg:min-h-[550px] overflow-hidden">
+        {/* Background Image - Ajustado para centralização total */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner_section%20quem%20somos-sSjLrIZzQGHtvdIE4Y04m1EC68e2kq.webp"
+            alt="Banner Quem Somos"
+            fill
+            className="object-cover object-left" // Garante que a imagem foque no centro em qualquer tela
+            priority
+          />
+        </div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
@@ -33,17 +37,16 @@ export function AboutHero() {
       </section>
 
       {/* History Section */}
-      <section className="relative overflow-hidden"> {/* Adicionado overflow-hidden por segurança */}
+      <section className="relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-0 items-stretch">
             {/* Left - Blue Rounded Shape */}
             <div className="relative">
-              {/* Shape with rounded right side - Adjusted for full semicircle */}
               <div 
                 className="bg-[#6799C6] text-white p-8 lg:p-12 flex items-center min-h-[280px] lg:min-h-[350px]"
                 style={{
-                  borderTopRightRadius: '180px',    // Valor aumentado para uma curva mais suave
-                  borderBottomRightRadius: '180px', // Agora arredondado também na parte inferior
+                  borderTopRightRadius: '180px',
+                  borderBottomRightRadius: '180px',
                   marginLeft: '-50vw',
                   paddingLeft: 'calc(50vw + 1rem)',
                 }}
@@ -58,14 +61,17 @@ export function AboutHero() {
             </div>
 
             {/* Right - Text Content */}
-            <div className="flex flex-col justify-center py-12 lg:py-16 lg:pl-12">
+            {/* Centralização de texto e itens apenas no mobile (items-center text-center) */}
+            <div className="flex flex-col justify-center py-12 lg:py-16 lg:pl-12 items-center text-center lg:items-start lg:text-left">
               <p className="text-muted-foreground leading-relaxed mb-5 text-sm md:text-base">
                 Fundada em 2019 na cidade de Juiz de Fora, a Pettrus Heritage Protection nasceu da necessidade de oferecer uma alternativa segura, transparente e justa para a proteção patrimonial. Nosso modelo mutualista garante que cada associado não seja apenas um cliente, mas parte de uma comunidade focada na segurança coletiva.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
                 Mantemos um compromisso inabalável com a gestão ética dos recursos, assegurando agilidade nos processos e a tranquilidade que você e sua família merecem. Na Pettrus, a solidez institucional é a base para relacionamentos duradouros.
               </p>
-              <div>
+              
+              {/* Botão centralizado no mobile */}
+              <div className="w-full flex justify-center lg:justify-start">
                 <Link href="/#formulario">
                   <Button
                     variant="outline"
