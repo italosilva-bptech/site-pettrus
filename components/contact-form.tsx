@@ -65,8 +65,8 @@ export function ContactForm() {
               <div className="md:col-span-2 bg-[#1a2744] p-8 lg:p-10 text-white">
                 <div className="mb-6">
                   <img 
-                    src="/iconpettrus.svg" 
-                    alt="Pettrus Icon" 
+                    src="/iconstg.svg" 
+                    alt="stg Icon" 
                     className="w-9 h-11 object-contain"
                   />
                 </div>
@@ -74,7 +74,7 @@ export function ContactForm() {
                   Dê o primeiro passo para proteger seu patrimônio hoje!
                 </h3>
                 <p className="text-white/75 text-sm leading-relaxed">
-                  Preencha o formulário e receba uma proposta personalizada de acordo com sua necessidade.
+                  Preencha o formulário e receba uma proposta personalizada. 
                 </p>
               </div>
 

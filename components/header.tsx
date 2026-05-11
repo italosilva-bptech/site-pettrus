@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { PettrusLogo } from "./pettrus-logo"
 import { Button } from "./ui/button"
 import { cn } from "@/lib/utils"
 
@@ -21,8 +20,6 @@ interface HeaderProps {
 export function Header({ activeRoute = "/" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  // A função scrollToForm foi removida, pois o Link com a âncora 
-  // do Next.js já faz esse trabalho de forma nativa e mais fluida.
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
@@ -30,7 +27,11 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <PettrusLogo className="h-12 w-auto" />
+            <img 
+              src="/logo-stg.svg" 
+              alt="Logo STG" 
+              className="h-12 w-auto" 
+            />
           </Link>
 
           {/* Desktop Navigation */}

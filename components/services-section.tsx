@@ -193,7 +193,7 @@ export function ServicesSection() {
               <div className="relative w-full h-full max-w-[500px]">
 
                 <Image
-                  src="/shield_pettrus_1.webp"
+                  src="/shieldstg.png"
                   alt="Proteção veicular Pettrus"
                   fill
                   className="object-contain drop-shadow-2xl"

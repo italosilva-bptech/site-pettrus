@@ -35,9 +35,7 @@ export function MissionVisionValues() {
               <h3 className="text-2xl font-bold text-[#1a365d]">Missão</h3>
             </div>
             <p className="text-slate-600 leading-relaxed text-sm">
-              Oferecer soluções eficientes em proteção patrimonial,
-              garantindo a tranquilidade de nossos associados através
-              de um atendimento de excelência e processos simplificados.
+              Oferecer soluções em Proteção Patrimonial Mutualista com eficiência, transparência e acessibilidade, proporcionando segurança e tranquilidade aos nossos associados em todo o Brasil. 
             </p>
           </div>
 
@@ -47,30 +45,22 @@ export function MissionVisionValues() {
               <h3 className="text-2xl font-bold text-[#1a365d]">Visão</h3>
             </div>
             <p className="text-slate-600 leading-relaxed text-sm">
-              Ser reconhecida como a principal referência nacional em
-              associação de proteção patrimonial, destacando-se pela
-              inovação, confiabilidade e pelo forte senso de comunidade
-              entre nossos membros.
+              Ser reconhecida nacionalmente como referência em proteção patrimonial mutualista, pela solidez da gestão, qualidade no atendimento e alto nível de satisfação dos associados. 
             </p>
           </div>
         </div>
 
         {/* Container Branco Principal (Valores) */}
         <div className="bg-white rounded-[32px] p-8 md:p-16 shadow-sm border border-slate-50">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            {/* Bloco "Nossos Valores" - SEM fundo cinza */}
-            <div className="flex flex-col items-center justify-center text-center p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <Gem className="w-7 h-7 text-[#1a365d]" />
-                <h3 className="text-2xl font-bold text-[#1a365d]">Nossos Valores</h3>
-              </div>
-              <p className="text-slate-500 text-sm leading-relaxed max-w-[220px]">
-                Os pilares que sustentam nosso compromisso com você e seu patrimônio.
-              </p>
-            </div>
+          
+          {/* Título de Valores Centralizado no Topo */}
+          <div className="flex items-center justify-center gap-3 mb-12">
+            <Gem className="w-7 h-7 text-[#1a365d]" />
+            <h3 className="text-2xl font-bold text-[#1a365d]">Nossos Valores</h3>
+          </div>
 
-            {/* Grid de Cards de Valores - COM fundo #C4C6CD a 10% */}
+          {/* Grid de Cards de Valores Ajustado para 3+2 */}
+          <div className="flex flex-wrap justify-center gap-6">
             {[
               {
                 icon: ShieldAlert,
@@ -100,15 +90,15 @@ export function MissionVisionValues() {
             ].map((value, index) => (
               <div 
                 key={index} 
-                className="bg-[#C4C6CD]/10 rounded-[24px] p-10 flex flex-col items-center text-center transition-all bg-[#C4C6CD]/20"
+                className="bg-[#C4C6CD]/10 rounded-[24px] p-8 flex flex-col items-center text-center w-full md:w-[calc(50%-24px)] lg:w-[calc(33.33%-24px)]"
               >
-                <div className="mb-4">
-                  <value.icon className="w-7 h-7 text-[#1a365d]" />
+                <div className="flex items-center gap-3 mb-4">
+                  <value.icon className="w-6 h-6 text-[#1a365d]" />
+                  <h4 className="font-bold text-[#1a365d]">
+                    {value.title}
+                  </h4>
                 </div>
-                <h4 className="font-bold text-[#1a365d] mb-3">
-                  {value.title}
-                </h4>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed max-w-[240px]">
                   {value.description}
                 </p>
               </div>

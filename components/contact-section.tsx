@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Headphones, MapPin } from "lucide-react" // Removido o Phone que não será mais usado
+import { Headphones, MapPin } from "lucide-react"
 import { Button } from "./ui/button"
 
 const addresses = [
@@ -10,15 +10,18 @@ const addresses = [
     city: "Juiz de Fora – MG",
     address: "Av. Barão do Rio Branco, 1035",
     complement: "Mariano Procópio – CEP 36045-475",
-    mapUrl:
-      "https://maps.google.com",
+    // Link para abrir o Google Maps em outra aba
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Av.+Barão+do+Rio+Branco,+1035+-+Mariano+Procópio,+Juiz+de+Fora+-+MG",
+    // Iframe específico para a unidade JF
+    mapIframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.4746142106494!2d-43.3551571!3d-21.7513364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b6058097587%3A0x63351337c7891823!2sAv.%20Bar%C3%A3o%20do%20Rio%20Branco%2C%201035%20-%20Mariano%20Proc%C3%B3pio%2C%20Juiz%20de%20Fora%20-%20MG%2C%2036045-475!5e0!3m2!1spt-BR!2sbr!4v1715440000000!5m2!1spt-BR!2sbr"
   },
   {
     city: "Piraúba – MG",
     address: "R. Tanguanhanha, 11",
     complement: "CEP 36170-000",
-    mapUrl:
-      "https://maps.google.com",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=R.+Tanguanhanha,+11,+Piraúba+-+MG",
+    // Iframe específico para a unidade Piraúba
+    mapIframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.666138656114!2d-43.0076246!3d-21.4324546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99616058097587%3A0x63351337c7891823!2sR.%20Tanguanhanha%2C%2011%2C%20Pira%C3%BAba%20-%20MG%2C%2036170-000!5e0!3m2!1spt-BR!2sbr!4v1715440000000!5m2!1spt-BR!2sbr"
   },
 ]
 
@@ -30,8 +33,8 @@ export function ContactSection() {
       <div className="relative min-h-[450px] lg:min-h-[520px] overflow-hidden">
         
         <Image
-          src="/banner_section_fale conosco.webp"
-          alt="Equipe de atendimento Pettrus"
+          src="/stg_fala_conosco_1.webp"
+          alt="Equipe de atendimento STG"
           fill
           priority
           className="object-cover"
@@ -48,7 +51,7 @@ export function ContactSection() {
           </h2>
 
           <p className="text-white/90 text-base md:text-lg mb-8 leading-relaxed max-w-2xl">
-            Torne-se um associado Pettrus e conte com um atendimento ágil e preparado para cuidar do que é importante para você.
+            Torne-se um associado STG e conte com um atendimento ágil e preparado para cuidar do que é importante para você. 
           </p>
 
           <Link href="/#formulario">
@@ -73,12 +76,12 @@ export function ContactSection() {
             </h3>
           </div>
 
-          {/* WhatsApp Card - ATUALIZADO COM O ÍCONE WPP.SVG */}
+          {/* WhatsApp Card */}
           <div className="bg-white border border-border rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="w-14 h-14 bg-[#e8f4fd] rounded-full flex items-center justify-center mx-auto mb-4">
               <Image 
                 src="/wpp.svg" 
-                alt="WhatsApp Pettrus" 
+                alt="WhatsApp STG" 
                 width={28} 
                 height={28} 
                 className="w-7 h-7"
@@ -90,7 +93,9 @@ export function ContactSection() {
             </h4>
 
             <a
-              href="tel:3220280289"
+              href="https://wa.me/553220280289"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#4a90d9] text-lg font-medium hover:underline"
             >
               (32) 2028-0289
@@ -135,7 +140,7 @@ export function ContactSection() {
             {addresses.map((location, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-border"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-border flex flex-col"
               >
                 <div className="p-6">
                   <div className="flex items-start gap-3">
@@ -161,19 +166,29 @@ export function ContactSection() {
                   </div>
                 </div>
 
-                {/* Map Button Area */}
-                <div className="relative h-40 bg-gradient-to-br from-[#e8f4fd] to-[#f5f7fa]">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <a
-                      href={location.mapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-[#1a2744] text-white px-5 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 hover:bg-[#1a2744]/90 transition-colors shadow-md"
-                    >
-                      <MapPin className="w-4 h-4" />
-                      Visualizar no Mapa
-                    </a>
-                  </div>
+                {/* Map Iframe Area */}
+                <div className="relative h-64 w-full bg-slate-100">
+                  <iframe 
+                    src={location.mapIframe} 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={true} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="absolute inset-0"
+                  ></iframe>
+                  
+                  {/* Botão flutuante para abrir no Google Maps App/Web */}
+                  <a
+                    href={location.mapLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-[#1a2744] px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 hover:bg-white transition-all shadow-lg border border-black/5"
+                  >
+                    <MapPin className="w-3 h-3" />
+                    ABRIR NO GOOGLE MAPS
+                  </a>
                 </div>
 
               </div>

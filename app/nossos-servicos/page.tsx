@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { ServicesSection } from "@/components/services-section"
+import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 
 export default function NossosServicos() {
@@ -10,6 +11,8 @@ export default function NossosServicos() {
       {/* Serviços Completo */}
       <ServicesSection />
       
+      <ContactForm />
+
       {/* Footer */}
       <Footer />
     </main>

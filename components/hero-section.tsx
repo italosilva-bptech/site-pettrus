@@ -16,7 +16,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero_section-i0W1aftVdSZCUCA3KGhSIAkfHzIIkH.webp"
+          src="/banner_stg_home_1.webp"
           alt="Família feliz dentro de um carro"
           fill
           // object-center centraliza no mobile
@@ -30,7 +30,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[#0E314C]/70 lg:hidden" />
         
         {/* Desktop: Gradiente original (oculto no mobile) */}
-        <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#1a2744] via-[#1a2744]/80 to-transparent" />
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#1a2744] via-[#1a2744]/30 to-transparent" />
       </div>
 
       {/* Content */}
@@ -41,7 +41,7 @@ export function HeroSection() {
             Segurança para o que realmente importa.
           </h1>
           <p className="text-white/85 text-base md:text-lg mb-10 leading-relaxed max-w-md">
-            A Pettrus oferece proteção patrimonial mutualista com gestão responsável, atendimento próximo e soluções eficientes para o seu dia a dia.
+            A STG oferece proteção patrimonial mutualista com gestão responsável, atendimento próximo e soluções eficientes para o seu dia a dia. 
           </p>
           <Button
             onClick={scrollToForm}

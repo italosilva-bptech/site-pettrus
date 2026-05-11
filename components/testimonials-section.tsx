@@ -15,14 +15,14 @@ const testimonials = [
     initials: "SG",
     name: "Saulo Galil",
     rating: 5,
-    text: "Registro aqui minha admiração pela Pettrus. Tive uma ótima experiência, com uma equipe extremamente dedicada e atenciosa. Atendimento que transmite confiança do início ao fim.",
+    text: "Registro aqui minha admiração pela STG. Tive uma ótima experiência, com uma equipe extremamente dedicada e atenciosa. Atendimento que transmite confiança do início ao fim.",
   },
 
   {
     initials: "RM",
     name: "Rafael Marciano",
     rating: 5,
-    text: "Já tive experiência com outras associações, mas o atendimento que recebi na Pettrus fez toda a diferença. Fui atendido com agilidade, respeito e eficiência em um momento importante. Recomendo com tranquilidade.",
+    text: "Já tive experiência com outras proteções, mas o atendimento que recebi na STG fez toda a diferença. Fui atendido com agilidade, respeito e eficiência em um momento importante. Recomendo com tranquilidade.",
   },
 
   {
@@ -76,7 +76,7 @@ export function TestimonialsSection() {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
-            A experiência de quem já confia na Pettrus
+            A experiência de quem já confia na STG
           </h2>
         </div>
 

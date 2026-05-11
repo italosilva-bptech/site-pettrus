@@ -8,22 +8,22 @@ const coverages = [
   {
     icon: Shield,
     title: "Roubo e furto",
-    description: "Proteção completa contra subtrações inesperadas.",
+    description: "Amparo em situações que fogem do seu controle.",
   },
   {
     icon: Car,
     title: "Colisões",
-    description: "Cobertura para danos materiais em acidentes.",
+    description: "Suporte completo para recuperar seu veículo e sua tranquilidade.",
   },
   {
     icon: TreePine,
     title: "Danos da natureza",
-    description: "Segurança contra eventos climáticos severos.",
+    description: "Chuvas, enchentes e fenômenos naturais não precisam ser uma preocupação.",
   },
   {
     icon: Zap,
     title: "Socorro emergencial",
-    description: "Atendimento rápido em situações críticas.",
+    description: "Atendimento rápido quando você mais precisa.",
   },
 ]
 

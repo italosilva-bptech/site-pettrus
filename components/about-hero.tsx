@@ -12,7 +12,7 @@ export function AboutHero() {
         {/* Background Image - Ajustado para centralização total */}
         <div className="absolute inset-0">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner_section%20quem%20somos-sSjLrIZzQGHtvdIE4Y04m1EC68e2kq.webp"
+            src="/stg_quem_somos_1.webp"
             alt="Banner Quem Somos"
             fill
             className="object-cover object-left" // Garante que a imagem foque no centro em qualquer tela
@@ -30,7 +30,7 @@ export function AboutHero() {
               responsabilidade.
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-md">
-              Conheça a Pettrus e entenda como a proteção patrimonial mutualista se transforma em segurança real para quem faz parte.
+              Conheça a STG e entenda como a proteção patrimonial mutualista se transforma em segurança real para quem faz parte.
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ export function AboutHero() {
           <div className="grid lg:grid-cols-2 gap-0 items-stretch">
             {/* Left - Blue Rounded Shape */}
             <div className="relative">
-              <div 
+              <div
                 className="bg-[#6799C6] text-white p-8 lg:p-12 flex items-center min-h-[280px] lg:min-h-[350px]"
                 style={{
                   borderTopRightRadius: '180px',
@@ -64,12 +64,20 @@ export function AboutHero() {
             {/* Centralização de texto e itens apenas no mobile (items-center text-center) */}
             <div className="flex flex-col justify-center py-12 lg:py-16 lg:pl-12 items-center text-center lg:items-start lg:text-left">
               <p className="text-muted-foreground leading-relaxed mb-5 text-sm md:text-base">
-                Fundada em 2019 na cidade de Juiz de Fora, a Pettrus Heritage Protection nasceu da necessidade de oferecer uma alternativa segura, transparente e justa para a proteção patrimonial. Nosso modelo mutualista garante que cada associado não seja apenas um cliente, mas parte de uma comunidade focada na segurança coletiva.
+                Cuidar do que realmente importa por meio de um modelo justo, acessível e colaborativo de proteção patrimonial mutualista.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
+                Fundada em 2019, na cidade de Juiz de Fora, Minas Gerais, a STG nasceu com uma visão sólida: ir além do básico e oferecer uma experiência pautada em confiança e responsabilidade.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
+                Ao longo da nossa trajetória, construímos uma gestão séria, transparente e ética, consolidando nossa atuação como uma associação especializada em proteção veicular. Entendemos, na prática, as necessidades de quem depende do seu veículo no dia a dia, e é isso que orienta cada decisão que tomamos.
+
+                Mais do que oferecer soluções, construímos relações duradouras com quem escolhe fazer parte.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
                 Mantemos um compromisso inabalável com a gestão ética dos recursos, assegurando agilidade nos processos e a tranquilidade que você e sua família merecem. Na Pettrus, a solidez institucional é a base para relacionamentos duradouros.
               </p>
-              
+
               {/* Botão centralizado no mobile */}
               <div className="w-full flex justify-center lg:justify-start">
                 <Link href="/#formulario">
@@ -77,7 +85,7 @@ export function AboutHero() {
                     variant="outline"
                     className="rounded-full px-8 py-2.5 text-foreground border-foreground hover:bg-foreground hover:text-background transition-colors font-medium"
                   >
-                    Seja um cliente Pettrus
+                    Seja um cliente STG
                   </Button>
                 </Link>
               </div>
