@@ -89,8 +89,8 @@ export function ServicesAccordion() {
           {/* Right Image - Car with shield */}
           <div className="relative h-[400px] lg:h-[500px] flex items-center justify-center">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/carro_pettrus_1-2Q3ZW52ARWmvcOHAec5xTiFZJ9cvlD.webp"
-              alt="Carro Pettrus com escudo de proteção"
+              src="carro stg.png"
+              alt="Carro STG com escudo de proteção"
               fill
               className="object-contain"
             />

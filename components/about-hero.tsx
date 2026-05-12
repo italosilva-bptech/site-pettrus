@@ -9,18 +9,16 @@ export function AboutHero() {
     <>
       {/* Hero Section with Background Image */}
       <section id="quem-somos" className="relative min-h-[500px] lg:min-h-[550px] overflow-hidden">
-        {/* Background Image - Ajustado para centralização total */}
         <div className="absolute inset-0">
           <Image
             src="/stg_quem_somos_1.webp"
             alt="Banner Quem Somos"
             fill
-            className="object-cover object-left" // Garante que a imagem foque no centro em qualquer tela
+            className="object-cover object-left"
             priority
           />
         </div>
 
-        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
           <div className="max-w-lg">
             <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6" style={{ lineHeight: '1.1' }}>
@@ -37,21 +35,34 @@ export function AboutHero() {
       </section>
 
       {/* History Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-white">
         <div className="container mx-auto px-4">
+          {/* items-stretch garante que as duas colunas tenham sempre a mesma altura */}
           <div className="grid lg:grid-cols-2 gap-0 items-stretch">
-            {/* Left - Blue Rounded Shape */}
-            <div className="relative">
+            
+            {/* Left Column - Image with central text */}
+            <div className="relative h-full">
               <div
-                className="bg-[#6799C6] text-white p-8 lg:p-12 flex items-center min-h-[280px] lg:min-h-[350px]"
+                className="relative overflow-hidden flex items-center h-full p-8 lg:p-12"
                 style={{
-                  borderTopRightRadius: '180px',
-                  borderBottomRightRadius: '180px',
                   marginLeft: '-50vw',
                   paddingLeft: 'calc(50vw + 1rem)',
                 }}
               >
-                <h3 className="font-heading text-2xl md:text-3xl lg:text-[2.5rem] leading-tight max-w-xs" style={{ lineHeight: '1.15' }}>
+                {/* Background Image - Clareada com overlay suave */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/carstgquemsomos.webp"
+                    alt="Pessoas em propósito claro"
+                    fill
+                    className="object-cover"
+                  />
+                  {/* Overlay reduzido para 40% de opacidade para a imagem aparecer bem */}
+                  <div className="absolute inset-0 bg-[#001D3D]/40" />
+                </div>
+
+                {/* Texto Centralizado Verticalmente na coluna */}
+                <h3 className="relative z-10 font-heading text-2xl md:text-3xl lg:text-[2.5rem] leading-tight max-w-xs text-white" style={{ lineHeight: '1.15' }}>
                   Unimos<br />
                   pessoas em<br />
                   torno de um<br />
@@ -60,9 +71,8 @@ export function AboutHero() {
               </div>
             </div>
 
-            {/* Right - Text Content */}
-            {/* Centralização de texto e itens apenas no mobile (items-center text-center) */}
-            <div className="flex flex-col justify-center py-12 lg:py-16 lg:pl-12 items-center text-center lg:items-start lg:text-left">
+            {/* Right Column - Text Content */}
+            <div className="flex flex-col justify-center py-12 lg:py-24 lg:pl-16 items-center text-center lg:items-start lg:text-left">
               <p className="text-muted-foreground leading-relaxed mb-5 text-sm md:text-base">
                 Cuidar do que realmente importa por meio de um modelo justo, acessível e colaborativo de proteção patrimonial mutualista.
               </p>
@@ -71,14 +81,12 @@ export function AboutHero() {
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
                 Ao longo da nossa trajetória, construímos uma gestão séria, transparente e ética, consolidando nossa atuação como uma associação especializada em proteção veicular. Entendemos, na prática, as necessidades de quem depende do seu veículo no dia a dia, e é isso que orienta cada decisão que tomamos.
-
-                Mais do que oferecer soluções, construímos relações duradouras com quem escolhe fazer parte.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
-                Mantemos um compromisso inabalável com a gestão ética dos recursos, assegurando agilidade nos processos e a tranquilidade que você e sua família merecem. Na Pettrus, a solidez institucional é a base para relacionamentos duradouros.
+                Mais do que oferecer soluções, construímos relações duradouras com quem escolhe fazer parte. Mantemos um compromisso inabalável com a gestão ética dos recursos, assegurando agilidade nos processos e a tranquilidade que você e sua família merecem.
               </p>
 
-              {/* Botão centralizado no mobile */}
+              {/* Botão */}
               <div className="w-full flex justify-center lg:justify-start">
                 <Link href="/#formulario">
                   <Button
@@ -90,6 +98,7 @@ export function AboutHero() {
                 </Link>
               </div>
             </div>
+
           </div>
         </div>
       </section>

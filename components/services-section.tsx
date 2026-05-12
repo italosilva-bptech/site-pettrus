@@ -118,7 +118,7 @@ export function ServicesSection() {
       <div className="relative min-h-[450px] overflow-hidden">
 
         <Image
-          src="/hero_section_nossos serviços.webp"
+          src="/banner_stg_nossos_servicos_1.webp"
           alt="Homem feliz com as chaves do carro"
           fill
           className="object-cover"

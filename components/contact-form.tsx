@@ -49,12 +49,12 @@ export function ContactForm() {
   return (
     <section id="formulario" className="relative py-20 lg:py-28">
       {/* Background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/formul_rio_section-GctkY6y4vNKrnUqhiPx8Cs5FSo1kKQ.webp')`,
-        }}
-      />
+     <div 
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: "url('/vetor_stg_1.webp')",
+  }}
+/>
       <div className="absolute inset-0 bg-[#1a2744]/30" />
 
       <div className="relative container mx-auto px-4">
