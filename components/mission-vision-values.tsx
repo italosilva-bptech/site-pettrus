@@ -56,7 +56,7 @@ export function MissionVisionValues() {
           {/* Título de Valores Centralizado no Topo */}
           <div className="flex items-center justify-center gap-3 mb-12">
             <Gem className="w-7 h-7 text-[#1a365d]" />
-            <h3 className="text-2xl font-bold text-[#1a365d]">Nossos Valores</h3>
+            <h3 className="text-2xl font-bold text-[#1a365d]">Valores</h3>
           </div>
 
           {/* Grid de Cards de Valores Ajustado para 3+2 */}

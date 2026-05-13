@@ -29,7 +29,7 @@ const coverages = [
 
 export function CoveragesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-background">
+    <section className="py-20 lg:py-28 bg-[#F0F3FF]">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14">

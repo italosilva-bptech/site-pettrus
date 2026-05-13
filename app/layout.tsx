@@ -1,6 +1,21 @@
 import type { Metadata, Viewport } from 'next'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+
+// Configuração da fonte Mugen (Títulos)
+const mugen = localFont({
+  src: './fonts/mugengroteskfw-bold.otf',
+  variable: '--font-mugen',
+  display: 'swap',
+})
+
+// Configuração da fonte Effra (Corpo/Texto)
+const effra = localFont({
+  src: './fonts/effra.woff2.ttf',
+  variable: '--font-effra',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'STG | Proteção Veicular',
@@ -29,10 +44,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className="bg-background">
-      <body className="antialiased font-sans">
+    <html lang="pt-BR">
+      {/* Injetamos as variáveis das duas fontes no body */}
+      <body className={`${mugen.variable} ${effra.variable} antialiased`}>
         {children}
-
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

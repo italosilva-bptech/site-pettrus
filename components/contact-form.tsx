@@ -150,7 +150,7 @@ export function ContactForm() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-[#1a2744] hover:bg-[#1a2744]/90 text-white font-medium py-4 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm tracking-wide uppercase"
+                      className="w-full bg-[#1a2744] hover:bg-[#1a2744]/90 text-white font-heading font-bold py-4 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm tracking-wide uppercase"
                     >
                       {isSubmitting ? "Enviando..." : "Receber cotação agora"}
                     </button>

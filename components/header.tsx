@@ -20,7 +20,6 @@ interface HeaderProps {
 export function Header({ activeRoute = "/" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-4">
@@ -30,7 +29,7 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
             <img 
               src="/logo-stg.svg" 
               alt="Logo STG" 
-              className="h-12 w-auto" 
+              className="h-7 w-auto" 
             />
           </Link>
 
@@ -41,7 +40,8 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors relative",
+                  // ADICIONADO: font-heading para usar a Mugen
+                  "text-sm font-heading font-medium transition-colors relative",
                   activeRoute === item.href
                     ? "text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent"
                     : "text-foreground/80 hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent hover:after:w-full after:transition-all"
@@ -55,7 +55,8 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
           {/* CTA Button Desktop */}
           <Link href="/#formulario" className="hidden md:inline-flex">
             <Button
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-medium"
+              // ADICIONADO: font-heading
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-heading font-medium"
             >
               Faça sua cotação agora
             </Button>
@@ -81,7 +82,8 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={cn(
-                    "text-sm font-medium transition-colors py-2",
+                    // ADICIONADO: font-heading
+                    "text-sm font-heading font-medium transition-colors py-2",
                     activeRoute === item.href
                       ? "text-foreground font-semibold"
                       : "text-foreground/80 hover:text-foreground"
@@ -91,14 +93,15 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
                 </Link>
               ))}
               
-              {/* CTA Button Mobile - Fecha o menu ao clicar */}
+              {/* CTA Button Mobile */}
               <Link 
                 href="/#formulario" 
                 onClick={() => setIsMenuOpen(false)}
                 className="w-full mt-2"
               >
                 <Button
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-medium w-full"
+                  // ADICIONADO: font-heading
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-heading font-medium w-full"
                 >
                   Faça sua cotação agora
                 </Button>

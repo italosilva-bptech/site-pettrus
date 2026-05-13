@@ -11,7 +11,7 @@ export function AboutHero() {
       <section id="quem-somos" className="relative min-h-[500px] lg:min-h-[550px] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/stg_quem_somos_1.webp"
+            src="/quem somos stg.webp"
             alt="Banner Quem Somos"
             fill
             className="object-cover object-left"
@@ -49,7 +49,7 @@ export function AboutHero() {
                   paddingLeft: 'calc(50vw + 1rem)',
                 }}
               >
-                {/* Background Image - Clareada com overlay suave */}
+                
                 <div className="absolute inset-0 z-0">
                   <Image
                     src="/carstgquemsomos.webp"
@@ -57,16 +57,13 @@ export function AboutHero() {
                     fill
                     className="object-cover"
                   />
-                  {/* Overlay reduzido para 40% de opacidade para a imagem aparecer bem */}
+                  
                   <div className="absolute inset-0 bg-[#001D3D]/40" />
                 </div>
 
                 {/* Texto Centralizado Verticalmente na coluna */}
                 <h3 className="relative z-10 font-heading text-2xl md:text-3xl lg:text-[2.5rem] leading-tight max-w-xs text-white" style={{ lineHeight: '1.15' }}>
-                  Unimos<br />
-                  pessoas em<br />
-                  torno de um<br />
-                  propósito claro
+                  Unimos pessoas em torno de um propósito claro
                 </h3>
               </div>
             </div>
@@ -75,18 +72,11 @@ export function AboutHero() {
             <div className="flex flex-col justify-center py-12 lg:py-24 lg:pl-16 items-center text-center lg:items-start lg:text-left">
               <p className="text-muted-foreground leading-relaxed mb-5 text-sm md:text-base">
                 Cuidar do que realmente importa por meio de um modelo justo, acessível e colaborativo de proteção patrimonial mutualista.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
                 Fundada em 2019, na cidade de Juiz de Fora, Minas Gerais, a STG nasceu com uma visão sólida: ir além do básico e oferecer uma experiência pautada em confiança e responsabilidade.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
                 Ao longo da nossa trajetória, construímos uma gestão séria, transparente e ética, consolidando nossa atuação como uma associação especializada em proteção veicular. Entendemos, na prática, as necessidades de quem depende do seu veículo no dia a dia, e é isso que orienta cada decisão que tomamos.
+                 Mais do que oferecer soluções, construímos relações duradouras com quem escolhe fazer parte. Mantemos um compromisso inabalável com a gestão ética dos recursos, assegurando agilidade nos processos e a tranquilidade que você e sua família merecem.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
-                Mais do que oferecer soluções, construímos relações duradouras com quem escolhe fazer parte. Mantemos um compromisso inabalável com a gestão ética dos recursos, assegurando agilidade nos processos e a tranquilidade que você e sua família merecem.
-              </p>
-
-              {/* Botão */}
+      
               <div className="w-full flex justify-center lg:justify-start">
                 <Link href="/#formulario">
                   <Button

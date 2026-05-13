@@ -13,7 +13,7 @@ export function Footer() {
               <img
                 src="/logostgbranco.svg"
                 alt="Logo STG"
-                className="h-12 w-auto"
+                className="h-9 w-auto"
               />
             </Link>
 
@@ -23,21 +23,21 @@ export function Footer() {
                 target="_blank"
                 className="text-white/75 hover:text-white transition-colors"
               >
-                <Instagram size={30} />
+                <Instagram size={20} />
               </Link>
               <Link
                 href="https://facebook.com"
                 target="_blank"
                 className="text-white/75 hover:text-white transition-colors"
               >
-                <Facebook size={30} />
+                <Facebook size={20} />
               </Link>
               <Link
                 href="https://linkedin.com"
                 target="_blank"
                 className="text-white/75 hover:text-white transition-colors"
               >
-                <Linkedin size={30} />
+                <Linkedin size={20} />
               </Link>
             </div>
           </div>
