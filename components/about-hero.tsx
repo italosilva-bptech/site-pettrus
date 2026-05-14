@@ -21,7 +21,7 @@ export function AboutHero() {
 
         <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
           <div className="max-w-lg">
-            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6" style={{ lineHeight: '1.1' }}>
+            <h1 className="font-black text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
               Construída<br />
               sobre confiança.<br />
               Movida por<br />
@@ -81,7 +81,7 @@ export function AboutHero() {
                 <Link href="/#formulario">
                   <Button
                     variant="outline"
-                    className="rounded-full px-8 py-2.5 text-foreground border-foreground hover:bg-foreground hover:text-background transition-colors font-medium"
+                    className="rounded-full px-8 py-2.5 text-foreground border-foreground hover:bg-foreground hover:text-background transition-colors font-bold"
                   >
                     Seja um cliente STG
                   </Button>

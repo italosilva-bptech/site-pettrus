@@ -15,7 +15,7 @@ export function MissionVisionValues() {
       className="relative overflow-hidden py-20 lg:py-28 bg-cover bg-center"
       style={{
         /* DESTAQUE: LOCAL PARA A IMAGEM DE BACKGROUND */
-        backgroundImage: "url('/images/bg-valores.jpg')",
+        backgroundImage: "url('')",
       }}
     >
       {/* Overlay de fundo */}

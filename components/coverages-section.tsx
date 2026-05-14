@@ -67,7 +67,7 @@ export function CoveragesSection() {
           <Link href="/nossos-servicos"> 
             <Button
               variant="outline"
-              className="rounded-full px-8 py-2.5 text-[#4a90d9] border-[#4a90d9] hover:bg-[#4a90d9] hover:text-white transition-colors font-medium"
+              className="rounded-full px-8 py-2.5 text-[#4a90d9] border-[#4a90d9] hover:bg-[#4a90d9] hover:text-white transition-colors font-bold"
             >
               Saiba mais!
             </Button>

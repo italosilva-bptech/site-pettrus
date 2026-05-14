@@ -10,9 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // Vincula as classes às variáveis CSS que criamos
+        // Vincula as classes utilitárias do Tailwind às variáveis do layout
         sans: ['var(--font-effra)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-mugen)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-raleway)', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

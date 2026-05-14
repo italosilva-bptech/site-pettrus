@@ -56,7 +56,7 @@ export function ContactSection() {
 
           <Link href="/#formulario">
             <Button
-              className="bg-white hover:bg-white/95 text-[#07162d] rounded-full h-12 px-10 text-base font-medium w-full md:w-auto min-w-[320px] shadow-xl"
+              className="bg-white hover:text-white text-[#07162d] rounded-full h-12 px-10 text-base font-bold w-full md:w-auto min-w-[320px] shadow-xl"
             >
               Solicitar minha cotação
             </Button>

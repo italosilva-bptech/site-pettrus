@@ -25,18 +25,19 @@
   --ring: #4a90d9;
   --radius: 0.5rem;
   
-  /* Pettrus colors */
-  --pettrus-navy: #1a2744;
-  --pettrus-blue: #4a90d9;
-  --pettrus-light-blue: #e8f4fd;
-  --pettrus-gray: #64748b;
-  --pettrus-light-gray: #f5f7fa;
+  /* STG colors */
+  --stg-navy: #1a2744;
+  --stg-blue: #4a90d9;
+  --stg-light-blue: #e8f4fd;
+  --stg-gray: #64748b;
+  --stg-light-gray: #f5f7fa;
 }
 
 @theme inline {
-  /* Mapeia as variáveis do Next.js para as classes do Tailwind */
+  /* Mapeia as variáveis do Next.js para as classes do Tailwind v4 */
   --font-sans: var(--font-effra);
-  --font-heading: var(--font-mugen);
+  /* CORREÇÃO: Alterado de var(--font-mugen) para var(--font-raleway) */
+  --font-heading: var(--font-raleway);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -58,15 +59,15 @@
   }
   
   body {
-    /* Define a Effra como fonte primária para tudo */
+    /* Define a Effra como fonte primária para todo o corpo de texto */
     font-family: var(--font-effra), ui-sans-serif, system-ui, sans-serif;
     @apply bg-background text-foreground;
   }
 
-  /* Define a Mugen para todos os títulos e a classe utilitária */
+  /* CORREÇÃO: Força a Raleway e aplica o font-weight bold (700) globalmente */
   h1, h2, h3, h4, h5, h6, .font-heading {
-    font-family: var(--font-mugen), system-ui, sans-serif;
-    /* Como sua fonte Mugen termina em "-bold", ela já deve ser negrita */
+    font-family: var(--font-raleway), system-ui, sans-serif;
+    font-weight: 700; 
   }
 }
 

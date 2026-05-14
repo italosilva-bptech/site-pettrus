@@ -139,7 +139,7 @@ export function ServicesSection() {
           {/* Ajustado: Link que leva para a Home e desce até o ID #formulario */}
           <Link href="/#formulario">
             <Button
-              className="bg-white hover:bg-white/95 text-[#1a2744] rounded-full px-10 py-5 text-base font-medium shadow-lg"
+              className="bg-white hover:text-white text-[#1a2744] rounded-full px-10 py-5 text-base font-bold shadow-lg"
             >
               Faça sua cotação agora
             </Button>

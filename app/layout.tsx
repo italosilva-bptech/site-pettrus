@@ -1,16 +1,18 @@
 import type { Metadata, Viewport } from 'next'
+import { Raleway } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-// Configuração da fonte Mugen (Títulos)
-const mugen = localFont({
-  src: './fonts/mugengroteskfw-bold.otf',
-  variable: '--font-mugen',
+// Configuração da fonte Raleway (Apenas para Títulos, Headings e Botões)
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['400', '500', '700', '800'], // Adicionado o peso 800 para garantir títulos extra-negritos se necessário
+  variable: '--font-raleway',
   display: 'swap',
 })
 
-// Configuração da fonte Effra (Corpo/Texto)
+// Configuração da fonte Effra (Mantida para o Corpo/Texto comum)
 const effra = localFont({
   src: './fonts/effra.woff2.ttf',
   variable: '--font-effra',
@@ -20,7 +22,7 @@ const effra = localFont({
 export const metadata: Metadata = {
   title: 'STG | Proteção Veicular',
   description:
-    'A Pettrus oferece proteção patrimonial mutualista com gestão responsável, atendimento próximo e soluções eficientes para o seu dia a dia.',
+    'A STG oferece proteção patrimonial mutualista com gestão responsável, atendimento próximo e soluções eficientes para o seu dia a dia.',
   keywords: [
     'proteção veicular',
     'seguro de carro',
@@ -45,8 +47,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      {/* Injetamos as variáveis das duas fontes no body */}
-      <body className={`${mugen.variable} ${effra.variable} antialiased`}>
+      {/* ATENÇÃO: Aqui juntamos a Raleway e a Effra, limpando completamente a Ubuntu */}
+      <body className={`${raleway.variable} ${effra.variable} antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

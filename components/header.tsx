@@ -40,8 +40,8 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  // ADICIONADO: font-heading para usar a Mugen
-                  "text-sm font-heading font-medium transition-colors relative",
+                 
+                  "text-sm font-heading font-semibold transition-colors relative",
                   activeRoute === item.href
                     ? "text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent"
                     : "text-foreground/80 hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent hover:after:w-full after:transition-all"
@@ -56,7 +56,7 @@ export function Header({ activeRoute = "/" }: HeaderProps) {
           <Link href="/#formulario" className="hidden md:inline-flex">
             <Button
               // ADICIONADO: font-heading
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-heading font-medium"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-sm font-heading font-semibold"
             >
               Faça sua cotação agora
             </Button>

@@ -79,7 +79,7 @@ export function ServicesAccordion() {
             <Link href="/nossos-servicos">
               <Button
                 variant="outline"
-                className="mt-8 rounded-full px-8 py-2.5 text-foreground border-foreground hover:bg-foreground hover:text-background transition-colors font-medium"
+                className="mt-8 rounded-full px-8 py-2.5 text-foreground border-foreground hover:bg-foreground hover:text-background transition-colors font-bold"
               >
                 Saiba mais!
               </Button>

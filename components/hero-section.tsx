@@ -45,7 +45,8 @@ export function HeroSection() {
           </p>
           <Button
             onClick={scrollToForm}
-            className="bg-white hover:bg-white/95 text-[#1a2744] rounded-full px-10 py-6 text-base font-medium shadow-lg hover:shadow-xl transition-all"
+            className="bg-white hover:text-white text-[#1a2744] rounded-full px-10 py-6 text-base font-bold shadow-lg hover:shadow-xl transition-all"
+            
           >
             Faça sua cotação agora
           </Button>
